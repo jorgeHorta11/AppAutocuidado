@@ -1,0 +1,7 @@
+{
+  "name": "ClienteApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
