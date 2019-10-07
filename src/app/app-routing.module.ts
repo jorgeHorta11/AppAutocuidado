@@ -8,6 +8,7 @@ const routes: Routes = [
   },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'panel-cal-dia2', loadChildren: './panel-cal-dia2/panel-cal-dia2.module#PanelCalDia2PageModule' },
+  { path: 'panel-cal-rcv', loadChildren: './panel-cal-rcv/panel-cal-rcv.module#PanelCalRcvPageModule' },
 
 ];
 @NgModule({

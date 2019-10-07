@@ -11,7 +11,8 @@
 
 
 
-<ion-content padding>
+<ion-content padding >
+  
   <ion-title text-center>
     <h2>Registro</h2>
   </ion-title>
@@ -25,11 +26,6 @@
     <ion-input></ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Edad:</ion-label>
-    <ion-input type="number"></ion-input>
-  </ion-item>
-
 
   <ion-item>
     <ion-label position="floating">Cédula:</ion-label>
@@ -38,26 +34,6 @@
 
 
   <ion-list>
-    <ion-radio-group>
-      <ion-list-header>
-        Género
-      </ion-list-header>
-
-      <ion-item>
-        <ion-label>Masculino</ion-label>
-        <ion-radio slot="start" value="biff" checked></ion-radio>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Femenino</ion-label>
-        <ion-radio slot="start" value="griff"></ion-radio>
-      </ion-item>
-    </ion-radio-group>
-
-    <ion-item>
-      <ion-label position="floating">Celular:</ion-label>
-      <ion-input type="number"></ion-input>
-    </ion-item>
 
     <ion-item>
       <ion-label position="floating">Contraseña:</ion-label>
@@ -69,7 +45,7 @@
       <ion-input type="password"></ion-input>
     </ion-item>
 
-    <ion-button fill="solid" (click)="TologinPage()">Registrarme</ion-button>
+    <ion-button shape="round" fill="outline" (click)="TologinPage()">Registrarme</ion-button>
   </ion-list>
 
 
