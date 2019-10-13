@@ -8,10 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PanelCalDia2Page {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
-  framingham() {
-    this.router.navigate(['panel-cal-rcv'])
-  }
-
+  
 }

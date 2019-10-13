@@ -1,242 +1,96 @@
 <ion-header>
-  <ion-toolbar color="secondary">
+    <ion-toolbar color="secondary">
+  
+      <ion-title text-center>
+        <h1>Autocuidado <ion-icon name="hand"></ion-icon>
+        </h1>
+      </ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  
+  </ion-header>
 
-    <ion-title text-center>
-      <h1>Autocuidado <ion-icon name="hand"></ion-icon>
-      </h1>
-    </ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button> </ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-
-
-</ion-header>
-
-<ion-content padding >
-  <h2>Indicaciones:</h2>
-  <p> Marque con un número entre 1-5, solo uno por enunciado,
-    el que mejor refleje su concepto, tenga en cuenta el valor de
-    cada número relacionado en el siguiente:<br>
-    1: NUNCA, 2: CASI NUNCA, 3: AVECES, 4: CASI SIEMPRE, 5: SIEMPRE.
-  </p>
-
-  <h2>Ítems:</h2>
+<ion-content padding>
+  <ion-title text-center>
+    <h2>RCV</h2>
+    <h4>Instrumento Framingham</h4>
+  </ion-title>
 
 
-  <ion-list>
+  <ion-item>
+    <ion-label position="floating">Edad:</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-radio-group>
     <ion-list-header>
-      <h3>Preguntas</h3>
+      Género
     </ion-list-header>
-    <p>1) Siento que mi estado de ánimo me permite cuidarme.</p>
-    <ion-item>
 
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
+    <ion-item>
+      <ion-label>Masculino</ion-label>
+      <ion-radio slot="start" value="biff" checked></ion-radio>
     </ion-item>
 
-    <p>2) Cuando duermo 6-8 horas diarias, me siento descansado.</p>
     <ion-item>
+      <ion-label>Femenino</ion-label>
+      <ion-radio slot="start" value="griff"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
 
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
+
+  <p>Colesterol total:</p>
+  <ion-item>
+
+    <ion-select placeholder="Select One">
+      <ion-select-option value="uno">Menor a 160 </ion-select-option>
+      <ion-select-option value="dos">160 - 199</ion-select-option>
+      <ion-select-option value="tres">200 - 239</ion-select-option>
+      <ion-select-option value="cuatro">240 - 279</ion-select-option>
+      <ion-select-option value="cinco">280</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-radio-group>
+    <ion-list-header>
+      Fuma:
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Si</ion-label>
+      <ion-radio slot="start" value="biff" checked></ion-radio>
     </ion-item>
 
-    <p>3) Invierto tiempo en mi propio cuidado.</p>
     <ion-item>
-
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
+      <ion-label>No</ion-label>
+      <ion-radio slot="start" value="griff"></ion-radio>
     </ion-item>
 
-    <p>4) Considero importante realizar ejercicio.</p>
-    <ion-item>
+  </ion-radio-group>
 
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
+  <p>HDL:</p>
+  <ion-item>
 
-    <p>5) Busco información y orientación sobre el manejo de mi enfermedad.</p>
-    <ion-item>
+    <ion-select placeholder="Select One">
+      <ion-select-option value="uno"> 60+ </ion-select-option>
+      <ion-select-option value="dos">50 - 59</ion-select-option>
+      <ion-select-option value="tres">40 - 49</ion-select-option>
+      <ion-select-option value="cuatro">Menor a 40</ion-select-option>
+      <ion-select-option value="cinco">160+</ion-select-option>
+    </ion-select>
+  </ion-item>
 
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
 
-    <p>6) Considero que conozco cómo actúan y las reacciones desfavorables de los medicamentos que tomo actualmente para
-      controlar la presión arterial.</p>
-    <ion-item>
+  <p>Presion arterial Sistolica:</p>
+  <ion-item>
 
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <ion-select placeholder="Select One">
+      <ion-select-option value="uno"> Menor a 120 </ion-select-option>
+      <ion-select-option value="dos">120 - 129</ion-select-option>
+      <ion-select-option value="tres">130 - 139</ion-select-option>
+      <ion-select-option value="cuatro">140 - 159</ion-select-option>
+    </ion-select>
+  </ion-item>
 
-    <p>7) Cuando inicio un nuevo medicamento solicitó al profesional de enfermería que me proporcione información
-      necesaria sobre la correcta administración.</p>
-    <ion-item>
-
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <p>8) Considero que la cantidad máxima de sal que puedo utilizar para todo el día en la preparación y consumo de
-      alimentos son dos cucharaditas.</p>
-    <ion-item>
-
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <p>9) Reemplazo mi tratamiento por terapias alternativas.</p>
-    <ion-item>
-
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <p>10) Considero que el profesional de enfermería me escucha y aclara mis inquietudes.</p>
-    <ion-item>
-
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <p>11) Conozco las complicaciones derivadas de la enfermedad.</p>
-    <ion-item>
-
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <p>12) Camino diariamente, como mínimo, 30 minutos.</p>
-    <ion-item>
-
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <p>13) Realizo cambios según las necesidades para mantener la salud y manejar adecuadamente la enfermedad.</p>
-    <ion-item>
-
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <p>14) Realizo cambios en mi dieta para mantener un peso adecuado.</p>
-    <ion-item>
-
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <p>15) Evalúo si las medidas que he tomado en el manejo de mi enfermedad permiten garantizar mi bienestar y el de mi
-      familia.</p>
-    <ion-item>
-
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <p>16) Consumo en mi dieta comidas ricas en verduras, frutas, fibra y baja en grasas.</p>
-    <ion-item>
-
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <p>17) Siento que mi enfermedad ha generado dificultades en el desarrollo adecuado de mi vida sexual.</p>
-    <ion-item>
-
-      <ion-select placeholder="Select One">
-        <ion-select-option value="uno">1 NUNCA</ion-select-option>
-        <ion-select-option value="dos">2 CASI NUNCA</ion-select-option>
-        <ion-select-option value="tres">3 AVECES</ion-select-option>
-        <ion-select-option value="cuatro">4 CASI SIEMPRE</ion-select-option>
-        <ion-select-option value="cinco">5 SIEMPRE</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-button shape="round" fill="outline" (click)="framingham()">Guardar Preguntas</ion-button>
-  </ion-list>
- 
 </ion-content>
