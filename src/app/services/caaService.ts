@@ -22,7 +22,7 @@ export class CAAService {
 
   createCAA(caa:CAA){
         const path = `${this.api}/caa`;
-        return this.http.post(path, [caa]);
+        return this.http.post(path, caa);
   }
   
 }
