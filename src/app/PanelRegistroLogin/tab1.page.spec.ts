@@ -18,7 +18,8 @@ describe('Tab1Page', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should be created', () => {
+    const service: Tab1Page = TestBed.get(Tab1Page);
+    expect(service).toBeTruthy();
   });
 });
