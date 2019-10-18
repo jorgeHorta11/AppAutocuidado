@@ -14,7 +14,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../PanelRegistroLogin/tab1.module').then(m => m.Tab1PageModule)
+              import('../Panelinicio/tab3.module').then(m => m.Tab3PageModule)
           }
         ]
       },
@@ -34,21 +34,21 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../Panelinicio/tab3.module').then(m => m.Tab3PageModule)
+              import('../panel-cal-rcv/panel-cal-rcv.module').then(m => m.PanelCalRcvPageModule)
           }
         ]
       },
       
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/login',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/login',
     pathMatch: 'full'
   }
 ];

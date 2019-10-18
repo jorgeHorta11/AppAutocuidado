@@ -55,9 +55,7 @@ export class Tab2Page {
     this.router.navigate(['panel-cal-dia2']);
     }
 
-    
-
-  ToDiagnosticoPage(){
+    ToDiagnosticoPage(){
     this.router.navigate(['panel-cal-dia2']);
   }
 

@@ -1,34 +1,29 @@
 <ion-header>
   <ion-toolbar color="secondary">
 
-    <ion-title text-center>
-      <h1>Autocuidado <ion-icon name="hand"></ion-icon>
-      </h1>
+    <ion-title class="ion-text-center">
+      <h1>Autocuidado</h1>
     </ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button> </ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
+   </ion-toolbar>
 
 </ion-header>
 
-
-<ion-content padding>
-  <ion-title text-center>
-    <h2>Login</h2>
-  </ion-title>
+<ion-content class="ion-padding">
+  
   <ion-img class="centrado" style="width: 160px; height: 160px;" src="assets/img/login.png"></ion-img>
   <ion-item>
-    <ion-label>Usuario:</ion-label>
-    <ion-input type="number" placeholder="Cedula"></ion-input>
+    <ion-label>Cédula:</ion-label>
+    <ion-input type="number" placeholder="1086172352"></ion-input>
   </ion-item>
-
+  
   <ion-item>
     <ion-label>Contraseña:</ion-label>
     <ion-input type="password" placeholder="******"></ion-input>
   </ion-item>
 
-
-  <ion-button expand="full" fill="outline" style="height: 40px;"><h2> Ingresar</h2></ion-button>
-
+  <br>
+  <ion-button routerLink="/tabs/tab2" class="ion-text-center" color="success" shape="round" fill="solid">Ingresar</ion-button>
+  <ion-button class="centrado" color="secondary" shape="round" fill="solid" 
+  routerLink="/register" >Registrarme</ion-button>
+   
 </ion-content>

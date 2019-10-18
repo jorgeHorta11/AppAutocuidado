@@ -1,95 +1,90 @@
 <ion-header>
     <ion-toolbar color="secondary">
   
-      <ion-title text-center>
-        <h1>Autocuidado: RCV <ion-icon name="hand"></ion-icon>
+      <ion-title class="ion-text-center">
+        <h1>Autocuidado <ion-icon name="hand"></ion-icon>
         </h1>
       </ion-title>
       <ion-buttons slot="start">
-        <ion-back-button defaultHref="home"></ion-back-button>
+        <ion-back-button defaultHref="taps/tap1"></ion-back-button>
       </ion-buttons>
     </ion-toolbar>
   
   </ion-header>
 
-<ion-content padding>
-  <ion-title text-center>
+  <ion-content class="ion-padding">
+    <ion-title class="ion-text-center">
     <h2>Instrumento Framingham</h2>
   </ion-title>
 
 
   <ion-item>
     <ion-label position="floating">Edad:</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" id="userAge" [(ngModel)]="framingham.userAge"></ion-input>
   </ion-item>
 
-  <ion-radio-group>
-    <ion-list-header>
+  <ion-radio-group  id="userGender" [(ngModel)]="framingham.userGender">
+    <ion-list-header> 
       Género
     </ion-list-header>
 
     <ion-item>
       <ion-label>Masculino</ion-label>
-      <ion-radio slot="start" value="biff" checked></ion-radio>
+      <ion-radio slot="start" value=M checked></ion-radio>
     </ion-item>
 
     <ion-item>
       <ion-label>Femenino</ion-label>
-      <ion-radio slot="start" value="griff"></ion-radio>
+      <ion-radio slot="start" value=F></ion-radio>
     </ion-item>
   </ion-radio-group>
 
 
   <p>Colesterol total:</p>
   <ion-item>
-
-    <ion-select placeholder="Select One">
-      <ion-select-option value="uno">Menor a 160 </ion-select-option>
-      <ion-select-option value="dos">160 - 199</ion-select-option>
-      <ion-select-option value="tres">200 - 239</ion-select-option>
-      <ion-select-option value="cuatro">240 - 279</ion-select-option>
-      <ion-select-option value="cinco">280</ion-select-option>
+    <ion-select placeholder="Selecione" id="Colesterol" [(ngModel)]="framingham.colesterol">
+      <ion-select-option value="a">Menor a 160 </ion-select-option>
+      <ion-select-option value="b">160 - 199</ion-select-option>
+      <ion-select-option value="c">200 - 239</ion-select-option>
+      <ion-select-option value="d">240 - 279</ion-select-option>
+      <ion-select-option value="e">Mayor a 280</ion-select-option>
     </ion-select>
   </ion-item>
 
-  <ion-radio-group>
+  <ion-radio-group id="fuma" [(ngModel)]="framingham.fuma">
     <ion-list-header>
       Fuma:
     </ion-list-header>
     <ion-item>
       <ion-label>Si</ion-label>
-      <ion-radio slot="start" value="biff" checked></ion-radio>
+      <ion-radio slot="start" value=True checked></ion-radio>
     </ion-item>
-
     <ion-item>
       <ion-label>No</ion-label>
-      <ion-radio slot="start" value="griff"></ion-radio>
+      <ion-radio slot="start" value=False></ion-radio>
     </ion-item>
-
-  </ion-radio-group>
+  </ion-radio-group >
 
   <p>HDL:</p>
   <ion-item>
-
-    <ion-select placeholder="Select One">
-      <ion-select-option value="uno"> 60+ </ion-select-option>
-      <ion-select-option value="dos">50 - 59</ion-select-option>
-      <ion-select-option value="tres">40 - 49</ion-select-option>
-      <ion-select-option value="cuatro">Menor a 40</ion-select-option>
-      <ion-select-option value="cinco">160+</ion-select-option>
+    <ion-select placeholder="Select One" id="hdl" [(ngModel)]="framingham.hdl">
+      <ion-select-option value="a"> Mayor a 60 </ion-select-option>
+      <ion-select-option value="b">50 - 59</ion-select-option>
+      <ion-select-option value="c">40 - 49</ion-select-option>
+      <ion-select-option value="d">Menor a 40</ion-select-option>
     </ion-select>
   </ion-item>
 
 
   <p>Presion arterial Sistolica:</p>
   <ion-item>
-
-    <ion-select placeholder="Select One">
-      <ion-select-option value="uno"> Menor a 120 </ion-select-option>
-      <ion-select-option value="dos">120 - 129</ion-select-option>
-      <ion-select-option value="tres">130 - 139</ion-select-option>
-      <ion-select-option value="cuatro">140 - 159</ion-select-option>
+    <ion-select placeholder="Select One" id="paSistolica" [(ngModel)]="framingham.paSistolica">
+      <ion-select-option value="a"> Menor a 120 </ion-select-option>
+      <ion-select-option value="b">120 - 129</ion-select-option>
+      <ion-select-option value="c">130 - 139</ion-select-option>
+      <ion-select-option value="d">140 - 159</ion-select-option>      
+      <ion-select-option value="e">Mayor a 160</ion-select-option>
     </ion-select>
   </ion-item>
-
+  <ion-button shape="round" fill="outline" (click)="createFramingham()" >Enviar</ion-button>
 </ion-content>

@@ -34,7 +34,7 @@
       <ion-input required type="password" confirmPassword [(ngModel)]="register.confirmPassword"></ion-input>
     </ion-item>   
     <br>
-    <ion-button color="success" shape="round" fill="solid" (click)="createRegister()" >Registrarme</ion-button>
-    <ion-button color="secondary" shape="round" fill="solid" (click)="TologinPage()" >Ingresar</ion-button>
-
+    <ion-button color="success" routerLink="/tabs/tab2" shape="round" fill="solid" (click)="createRegister()" >Registrarme</ion-button>
+    <ion-button color="secondary" routerLink="/login" shape="round" fill="solid">Ingresar</ion-button>
+    
 </ion-content>

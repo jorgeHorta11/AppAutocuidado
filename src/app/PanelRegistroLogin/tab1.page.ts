@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { RegisterService } from '../services/register.service';
-import { FormBuilder } from '@angular/forms';
 import { Register } from '../interfaces/register';
 
 @Component({
@@ -40,25 +39,19 @@ export class Tab1Page  {
       password: this.register.password,
       userRol: "paciente"       
     };
-        
+
     this.registerService.createRegister(register)
     .subscribe((newRegister) => {
       console.log(newRegister);
     });
     
-    this.router.navigate(['login']);
     localStorage.setItem("id",this.register.documentNumber.toString());
   }
-
-  guardadID(){
-    localStorage.setItem("id",this.register.documentNumber.toString());
+  
+  ToDiagnosticoPage(){
+    this.router.navigate(['panel-cal-dia2']);
   }
-   
-    
-  TologinPage(){
-    this.router.navigate(['login']);
-  }
-
+  
 }
 
 

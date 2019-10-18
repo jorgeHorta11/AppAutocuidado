@@ -9,15 +9,22 @@ import { Home } from './../interfaces/home';
 export class HomeService {
 
   private api = 'https://back-selfcareapp.herokuapp.com/selfcare';
-
+  url=this.api;
+  resp: any;
+  
   constructor(
     private http: HttpClient
   ) { }
 
  
-  getHome(documentNumber: number) {
-    const path = `${this.api}/home?documentNumber=${documentNumber}`;
+    getHome(documentNumber: number) {
+    const path = `${this.api}/home/${documentNumber}`;
     return this.http.get<Home>(path);
-  }  
+  }
+  
+  createRegister(home: Home) {
+    const path = `${this.api}/home`;
+    return this.http.post(path, home);
+  }
   
 }
