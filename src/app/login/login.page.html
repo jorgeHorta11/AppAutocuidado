@@ -12,18 +12,17 @@
   <ion-img class="centrado" style="width: 160px; height: 160px;" src="assets/img/login.png"></ion-img>
   <ion-item>    
     <ion-label><strong>Cédula:</strong></ion-label>
-    <ion-input type="number" placeholder="1086172352" [(ngModel)]="documentNumber" 
+    <ion-input id="documentNumber" type="number" placeholder="1086172352" [(ngModel)]="login.documentNumber" 
      required="true" pattern='[0-9]{10}' ></ion-input>
-  </ion-item>
-  
+  </ion-item> 
   
   <ion-item>
     <ion-label><strong>Contraseña:</strong></ion-label>
-    <ion-input type="password" placeholder="******" [(ngModel)]="password" required="true" minlength="6"
+    <ion-input type="password" placeholder="******" [(ngModel)]="login.password" required="true" minlength="6"
     ></ion-input>
   </ion-item>
   <br>
-  <ion-button routerLink="/tabs/caa" class="ion-text-center" color="success" 
+  <ion-button routerLink="/tabs/caa" (click)="setLogin()" class="ion-text-center" color="success" 
    fill="solid" expand="full" >
    Ingresar
   </ion-button>

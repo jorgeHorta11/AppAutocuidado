@@ -20,9 +20,13 @@
   <ion-list *ngIf="datos">
     <ion-item class="" *ngFor="let c of datos">
       <div class="">
-        <p> <strong>Asunto: </strong> {{c.tituloEmail}} <br>
+        <p><strong>Fecha: </strong> {{c.date | date:'short' }} <br>
+           <strong>Asunto: </strong> {{c.tituloEmail}} <br>
           <strong>Mensaje: </strong>{{c.cuerpoEmail}} </p>
       </div>
     </ion-item>
   </ion-list>
+  <ion-button routerLink="/tabs/message"  class="ion-text-center" color="secondary" fill="solid" expand="full">
+    Nuevo Mensaje
+  </ion-button>
 </ion-content>
