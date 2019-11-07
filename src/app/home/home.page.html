@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+      <ion-title class="ion-text-center">
+      <h1>Autocuidado <ion-icon name="hand"></ion-icon>
+      </h1>
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-back-button defaultHref="/login" text="Salir" icon="log-out"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-card style="background-color:#64AAFF;" expand="full">
+        <ion-card-header>
+          <ion-card-title class="ion-text-center"><strong>Tips</strong></ion-card-title>
+        </ion-card-header>
+      </ion-card>
+     <ion-card [ngStyle]="{'background-color': getColor(datos.textsByColor)}"> 
+        <ion-card-header>                
+          <ion-card-title class="ion-text-center" expand="full"><strong>ALERTA</strong></ion-card-title>   
+          <!--<ion-card-title> {{ datos.textsByColor }}</ion-card-title>-->  
+        </ion-card-header>
+      </ion-card>
+          <ion-card style="background-color: rgba(197, 243, 239, 0.452);"  *ngFor = "let d of datos.texts">
+              <ion-card-header>           
+                <ion-card-title> {{ d }}</ion-card-title>
+              </ion-card-header>
+            </ion-card>
+
+</ion-content>

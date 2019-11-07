@@ -1,0 +1,94 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+  
+      <ion-title class="ion-text-center">
+        <h1>Autocuidado <ion-icon name="hand"></ion-icon>
+        </h1>
+      </ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/caa"></ion-back-button>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-back-button defaultHref="/login" text="Salir" icon="log-out"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>  
+  </ion-header>
+
+  <ion-content class="ion-padding">
+      <ion-card style="background-color:#64AAFF;" expand="full">
+          <ion-card-header>
+            <ion-card-title class="ion-text-center"><strong>Instrumento Framingham</strong></ion-card-title>
+          </ion-card-header>
+        </ion-card>
+
+
+  <ion-item>
+    <ion-label position="floating">Edad:</ion-label>
+    <ion-input type="number" id="userAge" [(ngModel)]="framingham.userAge" required="true"></ion-input>
+  </ion-item>
+
+  <ion-radio-group  id="userGender" [(ngModel)]="framingham.userGender" required="true">
+    <ion-list-header> 
+      Género
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Masculino</ion-label>
+      <ion-radio slot="start" value=M checked></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Femenino</ion-label>
+      <ion-radio slot="start" value=F></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+
+
+  <p>Colesterol total:</p>
+  <ion-item>
+    <ion-select placeholder="Selecione" id="Colesterol" [(ngModel)]="framingham.colesterol" required="true">
+      <ion-select-option value="a">Menor a 160 </ion-select-option>
+      <ion-select-option value="b">160 - 199</ion-select-option>
+      <ion-select-option value="c">200 - 239</ion-select-option>
+      <ion-select-option value="d">240 - 279</ion-select-option>
+      <ion-select-option value="e">Mayor a 280</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-radio-group id="fuma" [(ngModel)]="framingham.fuma" required="true">
+    <ion-list-header>
+      Fuma:
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Si</ion-label>
+      <ion-radio slot="start" value=True checked></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>No</ion-label>
+      <ion-radio slot="start" value=False></ion-radio>
+    </ion-item>
+  </ion-radio-group >
+
+  <p>HDL:</p>
+  <ion-item>
+    <ion-select placeholder="Select One" id="hdl" [(ngModel)]="framingham.hdl" required="true">
+      <ion-select-option value="a"> Mayor a 60 </ion-select-option>
+      <ion-select-option value="b">50 - 59</ion-select-option>
+      <ion-select-option value="c">40 - 49</ion-select-option>
+      <ion-select-option value="d">Menor a 40</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
+  <p>Presion arterial Sistolica:</p>
+  <ion-item>
+    <ion-select placeholder="Select One" id="paSistolica" [(ngModel)]="framingham.paSistolica" required="true">
+      <ion-select-option value="a"> Menor a 120 </ion-select-option>
+      <ion-select-option value="b">120 - 129</ion-select-option>
+      <ion-select-option value="c">130 - 139</ion-select-option>
+      <ion-select-option value="d">140 - 159</ion-select-option>      
+      <ion-select-option value="e">Mayor a 160</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-button shape="round" fill="outline" (click)="createFramingham()" >Enviar</ion-button>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title class="ion-text-center">
+      <h1>Autocuidado</h1>
+    </ion-title>    
+    <ion-buttons slot="primary">
+      <ion-back-button defaultHref="/login" text="Salir" icon="log-out"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-card style="background-color:#64AAFF;" expand="full">
+  <ion-card-header>
+    <ion-card-title class="ion-text-center"><strong>Mensajes</strong></ion-card-title>
+  </ion-card-header>
+</ion-card>
+<br>
+<ion-content>
+
+  <ion-item>
+    <ion-label><strong>Asunto:</strong></ion-label>
+    <ion-input placeholder="Nuevo mensaje..." [(ngModel)]="tituloEmail"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-textarea rows="6" cols="35" placeholder="Escribir mensaje aquí..." 
+    [(ngModel)]="cuerpooEmail"></ion-textarea>
+  </ion-item>
+
+  <ion-button routerLink="/tabs/inbox" (click)="sendMessage()" class="ion-text-center" color="success" fill="solid" expand="full">
+    Enviar mensaje
+  </ion-button>
+
+  <ion-button routerLink="/tabs/inbox" class="ion-text-center" color="secondary" fill="solid" expand="full">
+    Ver mensajes
+  </ion-button>
+
+</ion-content>

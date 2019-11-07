@@ -9,32 +9,62 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'home',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../Panelinicio/tab3.module').then(m => m.Tab3PageModule)
+              import('../home/home.module').then(m => m.HomeModule)
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'caa',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../PanelCalcDia/tab2.module').then(m => m.Tab2PageModule)
+              import('../caa/caa.module').then(m => m.CAAModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'diagnostic',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../panel-cal-rcv/panel-cal-rcv.module').then(m => m.PanelCalRcvPageModule)
+              import('../diagnostic/diagnostic.module').then(m => m.DiagnosticModule)
+          }
+        ]
+      },
+      {
+        path: 'message',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../message/message.module').then(m => m.MessagePageModule)
+          }
+        ]
+      },
+      {
+        path: 'inbox',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../inbox/inbox.module').then(m => m.InboxPageModule)
+          }
+        ]
+      },
+      {
+        path: 'framingham',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../framingham/framingham.module').then(m => m.FraminghamModule)
           }
         ]
       },

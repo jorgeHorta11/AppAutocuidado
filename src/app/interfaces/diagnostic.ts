@@ -2,6 +2,7 @@ import { Indicator } from './indicator'
 
 export class Diagnostic {
 documentNumber: string
+domainName: string
 diagnosticCode: string
 diagnosticName:string
 diagnosticDefinition:string

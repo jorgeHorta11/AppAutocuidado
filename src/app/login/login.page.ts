@@ -9,7 +9,6 @@ import {NavController} from '@ionic/angular';
 })
 export class LoginPage {
 
-  constructor() { }
-
+  constructor() { }  
   
 }

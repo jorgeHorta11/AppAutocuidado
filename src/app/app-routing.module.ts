@@ -7,10 +7,13 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'panel-cal-dia2', loadChildren: './panel-cal-dia2/panel-cal-dia2.module#PanelCalDia2PageModule' },
-  { path: 'resultado', loadChildren: './panel-cal-rcv/panel-cal-rcv.module#PanelCalRcvPageModule' },
-  { path: 'register', loadChildren: './PanelRegistroLogin/tab1.module#Tab1PageModule' },
-  { path: 'home', loadChildren: './Panelinicio/tab3.module#Tab3PageModule' },
+  { path: 'framingham', loadChildren: './framingham/framingham.module#FraminghamModule' },
+  { path: 'resultado', loadChildren: './diagnostic/diagnostic.module#DiagnosticModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterModule' },
+  { path: 'home', loadChildren: './home/home.module#HomeModule' },  { path: 'prueba', loadChildren: './prueba/prueba.module#PruebaPageModule' },
+  { path: 'message', loadChildren: './message/message.module#MessagePageModule' },
+  { path: 'inbox', loadChildren: './inbox/inbox.module#InboxPageModule' },
+
 
   
 

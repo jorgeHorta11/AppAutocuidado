@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title class="ion-text-center">
+      <h1>Autocuidado <ion-icon name="hand"></ion-icon>
+      </h1>
+    </ion-title>        
+    <ion-buttons slot="primary">
+      <ion-back-button defaultHref="/login" text="Salir" icon="log-out"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card style="background-color:#64AAFF;" expand="full">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center" expand="full"><strong>Mensajes Recibidos</strong></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-list *ngIf="datos">
+    <ion-item class="" *ngFor="let c of datos">
+      <div class="">
+        <p> <strong>Asunto: </strong> {{c.tituloEmail}} <br>
+          <strong>Mensaje: </strong>{{c.cuerpoEmail}} </p>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

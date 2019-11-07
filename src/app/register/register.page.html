@@ -1,0 +1,78 @@
+
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title class="ion-text-center">
+      <h1>Autocuidado <ion-icon name="hand"></ion-icon>
+      </h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">  
+  <form [formGroup]="fGroup" novalidate>
+  <ion-title class="ion-text-center">
+    <h2>Registro</h2>
+  </ion-title>
+  <ion-item>
+      <ion-label position="floating">Cédula:</ion-label>
+      <ion-input id="documentNumber" type="number"
+      formControlName="documentNumber" ></ion-input>      
+  </ion-item><ion-item *ngIf="fGroup.controls.documentNumber.errors  && fGroup.controls.documentNumber.dirty">
+      <p color="danger" ion-text *ngIf="fGroup.get('documentNumber').hasError('required')">Campo requerido</p>
+      <p color="danger" ion-text *ngIf="fGroup.get('documentNumber').hasError('minlength')">Min 10 caracteres</p>
+      <p color="danger" ion-text *ngIf="fGroup.get('documentNumber').hasError('maxlength')">Max 10 caracteres</p>
+    </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nombre:</ion-label>
+    <ion-input  id="name" 
+    formControlName="userName"></ion-input>    
+  </ion-item>
+  <ion-item *ngIf="fGroup.controls.userName.errors && fGroup.controls.userName.dirty">
+      <p color="danger" ion-text *ngIf="fGroup.get('userName').hasError('required')">Campo requerido</p>
+      <p color="danger" ion-text *ngIf="fGroup.get('userName').hasError('minlength')">Min 3 caracteres</p>
+      <p color="danger" ion-text *ngIf="fGroup.get('userName').hasError('maxlength')">Max 18 caracteres</p>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Apellido:</ion-label>
+    <ion-input  id="lastName" 
+    formControlName="lastName"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="fGroup.controls.lastName.errors && fGroup.controls.lastName.dirty">
+      <p color="danger" ion-text *ngIf="fGroup.get('lastName').hasError('required')">Campo requerido</p>
+      <p color="danger" ion-text *ngIf="fGroup.get('lastName').hasError('minlength')">Min 3 caracteres</p>
+      <p color="danger" ion-text *ngIf="fGroup.get('lastName').hasError('maxlength')">Max 18 caracteres</p>
+  </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Contraseña:</ion-label>
+      <ion-input  type="password" id="password" 
+      formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="fGroup.controls.password.errors && fGroup.controls.password.dirty">
+        <p color="danger" ion-text *ngIf="fGroup.get('password').hasError('required')">Campo requerido</p>
+        <p color="danger" ion-text *ngIf="fGroup.get('password').hasError('minlength')">Min 6 caracteres</p>
+        <p color="danger" ion-text *ngIf="fGroup.get('password').hasError('maxlength')">Max 15 caracteres</p>
+      </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirmar contraseña:</ion-label>
+      <ion-input  type="password" id="confirmPassword" 
+      formControlName="confirmPassword"></ion-input>
+    </ion-item>  
+    <ion-item *ngIf="fGroup.controls.confirmPassword.errors && fGroup.controls.confirmPassword.dirty">
+        <p color="danger" ion-text *ngIf="fGroup.get('confirmPassword').hasError('required')">Campo requerido</p>
+        <p color="danger" ion-text *ngIf="fGroup.get('confirmPassword').hasError('minlength')">Min 6 caracteres</p>
+        <p color="danger" ion-text *ngIf="fGroup.get('confirmPassword').hasError('maxlength')">Max 15 caracteres</p>
+      </ion-item>
+
+    <br>
+    <ion-button color="success" routerLink="/login"  fill="solid" 
+    [disabled]="!fGroup.valid" (click)="sumitForm()"  expand="full" > Registrarme</ion-button> 
+    <ion-button color="secondary" routerLink="/login"  fill="solid" expand="full">
+      Ingresar
+    </ion-button>
+  </form> 
+    
+    
+</ion-content>
