@@ -29,7 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     RegisterProvider,
     ReactiveFormsModule,
 
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy  }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
 })

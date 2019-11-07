@@ -20,10 +20,10 @@ export class MessagePage implements OnInit {
     console.log("Este es el dato", id);
 
     const message = {
-      documentNumber: idNumber,
+      documentNumber: idNumber,      
+      from: "Mobile",
       tituloEmail: this.message.tituloEmail,
-      cuerpoEmail: this.message.cuerpoEmail,
-      from: "Mobile"       
+      cuerpoEmail: this.message.cuerpoEmail,    
     };
 
     this.messageService.createMessage(message)

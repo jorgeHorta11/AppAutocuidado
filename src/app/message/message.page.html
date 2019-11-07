@@ -18,12 +18,12 @@
 
   <ion-item>
     <ion-label><strong>Asunto:</strong></ion-label>
-    <ion-input placeholder="Nuevo mensaje..." [(ngModel)]="tituloEmail"></ion-input>
+    <ion-input placeholder="Nuevo mensaje..." [(ngModel)]="message.tituloEmail"></ion-input>
   </ion-item>
   
   <ion-item>
     <ion-textarea rows="6" cols="35" placeholder="Escribir mensaje aquí..." 
-    [(ngModel)]="cuerpooEmail"></ion-textarea>
+    [(ngModel)]="message.cuerpoEmail"></ion-textarea>
   </ion-item>
 
   <ion-button routerLink="/tabs/inbox" (click)="sendMessage()" class="ion-text-center" color="success" fill="solid" expand="full">

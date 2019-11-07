@@ -1,6 +1,6 @@
 export class Message {
-    documentNumber: number;
+    documentNumber: number;    
+    from: string;
     tituloEmail: string;
     cuerpoEmail: string;
-    from: string;
 }
