@@ -13,44 +13,36 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-    <ion-card style="background-color:#64AAFF;"> 
-        <ion-card-header>                
-          <ion-card-title class="ion-text-center"> <strong>Diagnóstico</strong> </ion-card-title>
-        </ion-card-header>
-      </ion-card>
+  <ion-card style="background-color:#64AAFF;">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center"> <strong>Diagnóstico</strong> </ion-card-title>
+    </ion-card-header>
+  </ion-card>
 
-   
-   <ion-label><strong>Nombre del Dominio: </strong></ion-label><br>
-   <ion-label> {{datos.domainName}} </ion-label><br><br>
 
-   <ion-label><strong>Código del Diagnóstico:</strong> {{datos.diagnosticCode}}</ion-label><br><br>
+  <ion-label><strong>Documento:</strong> {{datos.documentNumber}}</ion-label><br><br>
+  <ion-label><strong>Nombre del Dominio:</strong><br> {{datos.domainName}}</ion-label><br><br>
+  <ion-label><strong>Código Diagnóstico:</strong> {{diagnostics.diagnosticCode}}</ion-label><br><br>
+  <ion-label><strong>Nombre Diagnóstico:</strong> {{diagnostics.diagnosticName}}</ion-label><br><br>
+  <ion-label><strong>Definición Diagnóstico:</strong> {{diagnostics.diagnosticDefinition}}</ion-label><br><br>
+  <ion-label><strong>Características:</strong> {{diagnostics.caracteristicsList}}</ion-label><br><br>
 
-   <ion-label><strong>Nombre del diagnóstico:</strong></ion-label><br>
-   <ion-label> {{datos.diagnosticName}} </ion-label><br><br>
 
-   <ion-label><strong>Definición Diagnóstico:</strong></ion-label><br>
-   <ion-label> {{datos.diagnosticDefinition}} </ion-label><br><br>
+  <ion-label><strong>Código NOC:</strong> {{nocs.nocCode}}</ion-label><br><br>
+  <ion-label><strong>Nombre NOC:</strong> {{nocs.nocName}}</ion-label><br><br>
+  <ion-label><strong>Definición NOC:</strong> {{nocs.nocDefinition}}</ion-label><br><br>
+  <ion-label><strong>Indicadores NOC:</strong> </ion-label>
+  <ion-list *ngIf="nocList">
+      <ion-item class="" *ngFor="let c of nocList">
+        <div class="">
+          <p><strong>Descripción: </strong> {{c.indicatorDescription}} </p>
+        </div>
+      </ion-item>
+    </ion-list>
 
-   <ion-label><strong>Codigo Noc:</strong> {{datos.nocCode}} </ion-label><br><br>
 
-   <ion-label><strong>Nombre Noc:</strong></ion-label><br>
-   <ion-label> {{datos.nocName}} </ion-label><br><br>
-
-   <ion-label><strong>Definición NOC:</strong></ion-label><br>
-   <ion-label> {{datos.nocDefinition}} </ion-label><br><br>
-
-   <!--<ion-label>Indicadores</ion-label><br>
-   <ion-label *ngFor = "let d of datos.indicatorsList"> {{datos.indicatorsList.indicatorDescription}} </ion-label><br><br>-->
-
-   <ion-label><strong>Código NIC:</strong>{{datos.nicCode}}</ion-label><br><br>
-
-   <ion-label><strong>Nombre NIC:</strong></ion-label><br>
-   <ion-label> {{datos.nicName}} </ion-label><br><br>
-
-   <ion-label><strong>Definición NIC:</strong></ion-label><br>
-   <ion-label> {{datos.nicDefinition}} </ion-label><br><br>
-
-   <ion-label><strong>Actividades:</strong></ion-label><br>
-<ion-label *ngFor = "let d of datos.activitiesList"> {{datos.activitiesList}} </ion-label><br>
-   
+  <ion-label><strong>Código NIC:</strong> {{nics.nicCode}}</ion-label><br><br>
+  <ion-label><strong>Nombre NIC:</strong> {{nics.nicName}}</ion-label><br><br>
+  <ion-label><strong>Definición NIC:</strong> {{nics.nicDefinition}}</ion-label><br><br>
+  <ion-label><strong>Lista de Actividades:</strong> {{nics.activitiesList}}</ion-label><br><br>
 </ion-content>

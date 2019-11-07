@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { RegisterProvider } from './proviers/registerProvider';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     StatusBar,
     SplashScreen,
     RegisterProvider,
+    FormsModule,
     ReactiveFormsModule,
 
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

@@ -19,7 +19,7 @@ export class InboxPage implements OnInit {
 
     this.messageService.getMessage(idNumber)
     .subscribe(message => {
-      console.table(message);
+      console.log(message);
       this.datos = message;
     })
   }

@@ -1,17 +1,12 @@
-import { Indicator } from './indicator'
+
+import { DiagnosticDX } from './diagnosticDX'
+import { NIC } from './nic';
+import { NOC } from './noc';
 
 export class Diagnostic {
-documentNumber: string
-domainName: string
-diagnosticCode: string
-diagnosticName:string
-diagnosticDefinition:string
-nocCode:string
-nocName: string
-nocDefinition: string
-indicatorsList: [Indicator]
-nicCode: string
-nicName: string
-nicDefinition: string
-activitiesList: [string]
+documentNumber: string;
+domainName: string;
+diagnostic: DiagnosticDX;
+noc: NOC;
+nic: NIC;
 }

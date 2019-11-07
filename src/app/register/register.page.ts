@@ -15,12 +15,8 @@ export class RegisterPage {
   submitted = false;
   register: Register = new Register();
 
-  checkPasswords(fGroup) {
-    let pass = fGroup.controls.password.value;
-    let confirmPass = fGroup.controls.confirmPassword.value;
-    return pass === confirmPass ? null : { notSame: true }
-  }
-   
+
+
   constructor(private router: Router, private registerService: RegisterService,
     private fBuilder: FormBuilder, ) {
     this.fGroup = this.fBuilder.group({
@@ -52,16 +48,25 @@ export class RegisterPage {
     })
   }
 
+   
+
   sumitForm() {
     this.submitted = true;
     if (this.fGroup.invalid) {
       return;
     }
-    console.log(this.fGroup.value)
+    const register = {
+      documentNumber: this.fGroup.value.documentNumber,
+      userName: this.fGroup.value.userName,
+      lastName: this.fGroup.value.lastName,
+      password: this.fGroup.value.password,
+      userRol: 'Paciente',
+    }
+    console.log(this.register)
     localStorage.setItem("id", this.fGroup.value.documentNumber.toString());
     console.log(this.fGroup.value.documentNumber)
 
-    this.registerService.createRegister(this.fGroup.value)
+    this.registerService.createRegister(register)
       .subscribe((newRegister) => {
         console.log(newRegister);
       });

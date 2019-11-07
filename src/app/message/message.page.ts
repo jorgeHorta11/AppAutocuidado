@@ -28,9 +28,11 @@ export class MessagePage implements OnInit {
 
     this.messageService.createMessage(message)
     .subscribe((newMessage) => {
-      console.log(newMessage);
+      console.table(newMessage);
     });
     alert('Mensaje enviado con éxito!' )
+    this.message.tituloEmail = '';
+    this.message.cuerpoEmail = '';
   }
 
 }

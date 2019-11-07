@@ -15,13 +15,8 @@ export class LoginService {
     private http: HttpClient
   ) { }
 
-  getAllRegisters() {
-    const path = `${this.api}/users`;
-    return this.http.get<Login[]>(path);
-  }
-
-  getRegister(documentNumber: number) {
-    const path = `${this.api}/user/${documentNumber}`;
+  getlogin(documentNumber: number) {
+    const path = `${this.api}/login/${documentNumber}`;
     return this.http.get<Login>(path);
   }
   

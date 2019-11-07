@@ -37,7 +37,7 @@ export class FraminghamClass {
       console.log(newFramingham);
     });
     
-    this.router.navigate(['tabs/tab1']);
+    this.router.navigate(['tabs/home']);
   }
   
 }
