@@ -8,11 +8,9 @@ import { AlarmaService } from '../services/alarmaService';
 @Component({
   selector: 'app-alarma',
   templateUrl: './alarma.page.html',
-  styleUrls: ['./alarma.page.scss'],
+  styleUrls: ['./alarma.page.scss']
 })
-
 export class AlarmaPage {
-
   select: HTMLSelectElement;
   alarma: Alarma = new Alarma();
   //howLongOption: HowLongOption = new HowLongOption();
@@ -31,9 +29,7 @@ export class AlarmaPage {
   validar7: string;
   validar8: string;
   validar9: string;
-  constructor(private alarmaService: AlarmaService) {
-
-  }
+  constructor(private alarmaService: AlarmaService) {}
 
   radio_list = [
     {
@@ -43,21 +39,22 @@ export class AlarmaPage {
       text: 'Si',
       checked: false,
       color: 'success'
-    }, {
+    },
+    {
       id: '2',
       name: 'radio_list',
       value: '0',
       text: 'No',
       checked: false,
       color: 'danger'
-    },
+    }
   ];
   Option1: any;
 
   radioGroupChange(event) {
     this.selectedRadioGroup = event.detail;
   }
-  // TODO: Valida cada opción elegida y muestra o esconde el contenido de la segunda pregunta. 
+  // TODO: Valida cada opción elegida y muestra o esconde el contenido de la segunda pregunta.
   radioSelect1(event) {
     console.log('1 Respuesta: ', event.detail.value);
     this.selectedRadioItem = event.detail;
@@ -140,11 +137,9 @@ export class AlarmaPage {
     }
   }
 
-
   createAlarma() {
-    let id = localStorage.getItem('id');
-    let idNumber = parseInt(id);
-    console.log('Este es el id', id);
+    const id = localStorage.getItem('id');
+    const idNumber = parseInt(id);
 
     this.alarma = {
       documentNumber: idNumber,
@@ -193,12 +188,14 @@ export class AlarmaPage {
           question: '9',
           optionYesNo: this.validar9,
           howLongOption: 'Días'
-        },
+        }
       ]
     };
 
     console.log(this.alarma.preguntaList);
 
-    this.alarmaService.createAlarma(this.alarma).subscribe((newAlarma) => {console.log(newAlarma);});
+    this.alarmaService.createAlarma(this.alarma).subscribe(newAlarma => {
+      console.log(newAlarma);
+    });
   }
 }
