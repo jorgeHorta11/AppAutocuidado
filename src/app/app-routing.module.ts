@@ -10,9 +10,11 @@ const routes: Routes = [
   { path: 'framingham', loadChildren: './framingham/framingham.module#FraminghamModule' },
   { path: 'resultado', loadChildren: './diagnostic/diagnostic.module#DiagnosticModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterModule' },
-  { path: 'home', loadChildren: './home/home.module#HomeModule' },  { path: 'prueba', loadChildren: './prueba/prueba.module#PruebaPageModule' },
+  { path: 'home', loadChildren: './home/home.module#HomeModule' },
+  { path: 'prueba', loadChildren: './prueba/prueba.module#PruebaPageModule' },
   { path: 'message', loadChildren: './message/message.module#MessagePageModule' },
   { path: 'inbox', loadChildren: './inbox/inbox.module#InboxPageModule' },
+  { path: 'alarma', loadChildren: './alarma/alarma.module#AlarmaPageModule' },
 
 
   

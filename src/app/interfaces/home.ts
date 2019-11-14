@@ -1,5 +1,5 @@
 export class Home {
     documentNumber: number;
-    textsByColor: string;
-    texts: [string];
+    color: string;
+    recomendacionesList: [string];
 }

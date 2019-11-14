@@ -11,9 +11,12 @@ import { Home } from '../interfaces/home';
 })
 export class HomePage implements OnInit{
   datos = new Home;
+
+  color= this.datos.color;
     constructor(private router: Router,
               private homeService: HomeService
   ) {}
+
 
     ToHistoriaPage(){
     this.router.navigate(['framingham']);
@@ -33,15 +36,15 @@ export class HomePage implements OnInit{
 
   }
 
-  getColor(textsByColor){
-    switch(textsByColor){
-      case "1":
+  getColor(color){
+    switch(color){
+      case "AMARILLO":
         return '#FFEB2C'
-      case "2":
+      case "NARANJA":
           return '#EBB710'
-      case "3":
+      case "ROJO":
           return '#FF3925'
-      case "4":
+      case "VERDE":
          return '#2CFF1F'
     }
   }

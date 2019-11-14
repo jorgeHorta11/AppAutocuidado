@@ -1,0 +1,177 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title class="ion-text-center">
+      <h1>Autocuidado<ion-icon name="hand"></ion-icon>
+      </h1>
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-back-button defaultHref="/login" text="Salir" icon="log-out"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card style="background-color:#64AAFF;" expand="full">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center"><strong>Alarma</strong></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-list>
+    <ion-list-header>
+      <h2>Preguntas:</h2>
+    </ion-list-header>
+
+    <ion-list>
+      <ion-radio-group allow-empty-selection="true" name="radio-group" (ionChange)="radioGroupChange($event)">
+        <ion-label>1) ¿Al mirarse a un espejo y sonreír observa que
+          un lado de la boca está más abajo que el otro sin usted causarlo?</ion-label>
+        <ion-item *ngFor="let item of radio_list" (ionSelect)="radioSelect1($event)"  required="true">
+          <ion-label>{{item.text}}</ion-label>
+          <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"
+            color="{{item.color}}"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-item id="ocultar1">
+      <ion-label>&nbsp;¿Hace cuanto?<br></ion-label>
+      <ion-select required="true" placeholder="seleccione" name="option1" [(ngModel)]="option1" required="true">
+        <ion-select-option value="Menos de 1 hora">Menos de 1 hora </ion-select-option>
+        <ion-select-option value="De 4 a 12 horas">De 4 a 12 horas </ion-select-option>
+        <ion-select-option value="Más de 1 semana">Más de 1 semana </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-label>2) Pérdida de la fuerza muscular de uno de los brazos
+      ¿al levantar los dos brazos uno de los dos se le cae sin usted ocasionar?</ion-label>
+    <ion-radio-group id="answer2"  (ionChange)="radioGroupChange($event)"  required="true">
+      <ion-item *ngFor="let item of radio_list" (ionSelect)="radioSelect2($event)">
+        <ion-label>{{item.text}}</ion-label>
+        <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"
+          color="{{item.color}}"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <ion-item id="ocultar2">
+      <ion-label>&nbsp;¿Hace cuanto?<br></ion-label>
+      <ion-select (change)="capturar()" required="true"  placeholder="seleccione" required="true">
+        <ion-select-option value="1">No sé </ion-select-option>
+        <ion-select-option value="2">Menos de 3 horas </ion-select-option>
+        <ion-select-option value="3">Más de 1 día </ion-select-option>
+        <ion-select-option value="4">Más de 1 semana</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-label>3) ¿Puede repetir frases cortas y coherentes?
+      Ejemplo: loro viejo no aprende a hablar.
+    </ion-label>
+    <ion-radio-group id="answer3" (ionChange)="radioGroupChange($event)"  required="true">
+      <ion-item *ngFor="let item of radio_list" (ionSelect)="radioSelect3($event)">
+        <ion-label>{{item.text}}</ion-label>
+        <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"
+          color="{{item.color}}"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <ion-item id="ocultar3">
+      <ion-label>&nbsp;¿Hace cuanto?<br></ion-label>
+      <ion-select (change)="capturar()" required="true"  placeholder="seleccione"  required="true">
+        <ion-select-option value="1">No sé </ion-select-option>
+        <ion-select-option value="2">Menos de 3 horas </ion-select-option>
+        <ion-select-option value="3">Más de 24 horas </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-label>4) ¿Tiene dolor opresivo en pecho, brazo, mandíbula o cuello?</ion-label>
+    <ion-radio-group id="answer4" (ionChange)="radioGroupChange($event)"  required="true">
+      <ion-item *ngFor="let item of radio_list" (ionSelect)="radioSelect4($event)">
+        <ion-label>{{item.text}}</ion-label>
+        <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"
+          color="{{item.color}}"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <ion-item id="ocultar4">
+      <ion-label>&nbsp;¿Hace cuanto?<br></ion-label>
+      <ion-select (change)="capturar()" required="true"  placeholder="seleccione"  required="true">
+        <ion-select-option value="1">Horas</ion-select-option>
+        <ion-select-option value="2">Días</ion-select-option>
+        <ion-select-option value="3">Semanas </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-label>5) ¿Cuándo está estresado le inicia dolor?</ion-label>
+    <ion-radio-group id="answer5" (ionChange)="radioGroupChange($event)"  required="true">
+      <ion-item *ngFor="let item of radio_list" (ionSelect)="radioSelect5($event)">
+        <ion-label>{{item.text}}</ion-label>
+        <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"
+          color="{{item.color}}"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <ion-label>6) ¿El dolor mejora con reposo?</ion-label>
+    <ion-radio-group id="answer6" (ionChange)="radioGroupChange($event)"  required="true">
+      <ion-item *ngFor="let item of radio_list" (ionSelect)="radioSelect6($event)">
+        <ion-label>{{item.text}}</ion-label>
+        <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"
+          color="{{item.color}}"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <ion-label>7) ¿Ha disminuido de la cantidad de orina? </ion-label>
+    <ion-radio-group id="answer7" (ionChange)="radioGroupChange($event)"  required="true">
+      <ion-item *ngFor="let item of radio_list" (ionSelect)="radioSelect7($event)">
+        <ion-label>{{item.text}}</ion-label>
+        <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"
+          color="{{item.color}}"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <ion-item id="ocultar5">
+      <ion-label>&nbsp;¿Hace cuanto?<br></ion-label>
+      <ion-select (change)="capturar()" required="true"  placeholder="seleccione"  required="true">
+        <ion-select-option value="1">Más de 5 horas </ion-select-option>
+        <ion-select-option value="2">Más de 1 día </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+      <ion-label>8) ¿Tiene hinchado en las piernas, brazos u otro parte del cuerpo?</ion-label>
+      <ion-radio-group id="answer8" (ionChange)="radioGroupChange($event)">
+        <ion-item *ngFor="let item of radio_list" (ionSelect)="radioSelect8($event)">
+          <ion-label>{{item.text}}</ion-label>
+          <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"
+            color="{{item.color}}"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+      <ion-item id="ocultar6">
+        <ion-label>&nbsp;¿Hace cuanto?<br></ion-label>
+        <ion-select (change)="capturar()" required="true"  placeholder="seleccione" required="true">
+          <ion-select-option value="1">Hace 2 días </ion-select-option>
+          <ion-select-option value="2">Días </ion-select-option>
+          <ion-select-option value="3">Más de 1 semana </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+        <ion-label>9) ¿Tiene ausencia total de la orina (No ha orinado hoy) o
+          la cantidad que ha eliminado es muy poca a comparación de lo normal? </ion-label>
+        <ion-radio-group id="answer9" (ionChange)="radioGroupChange($event)">
+          <ion-item *ngFor="let item of radio_list" (ionSelect)="radioSelect9($event)">
+            <ion-label>{{item.text}}</ion-label>
+            <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"
+              color="{{item.color}}"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+        <ion-item id="ocultar7">
+          <ion-label>&nbsp;¿Hace cuanto?<br></ion-label>
+          <ion-select (change)="capturar()" required="true"  placeholder="seleccione"  required="true">
+            <ion-select-option value="1">24 horas </ion-select-option>
+            <ion-select-option value="2">Días </ion-select-option>
+            <ion-select-option value="3">Más de 1 semana </ion-select-option>
+          </ion-select>
+        </ion-item>
+
+  </ion-list>
+
+  <ion-button color="secondary" (click)="createAlarma()" expand="full" routerLink="/tabs/inbox">Enviar alarma</ion-button>
+  
+
+</ion-content>

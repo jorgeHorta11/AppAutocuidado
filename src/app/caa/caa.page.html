@@ -16,53 +16,58 @@
           <ion-card-title class="ion-text-center"><strong>Instrumento CAA</strong></ion-card-title>
         </ion-card-header>
       </ion-card>
-  <h2>Indicaciones:</h2>
-  <p> Marque con un número entre 1-5:<br>
-    1: NUNCA, 2: CASI NUNCA, 3: AVECES, 4: CASI SIEMPRE, 5: SIEMPRE.
-  </p>
-  <ion-list>
+    <ion-list>
     <ion-list-header>
       <h2>Preguntas</h2>
     </ion-list-header>
     <p>1) Siento que mi estado de ánimo me permite cuidarme.</p>
     <ion-item>      
       <ion-select [(ngModel)]="caa.answer1" (change)="capturar()" required="true" placeholder="seleccione">
-          <ion-select-option *ngFor="let dato of datos">  
-              {{dato}}
-            </ion-select-option>
+        <ion-select-option value="1">Nunca </ion-select-option>
+        <ion-select-option value="2">Casi nunca</ion-select-option>
+        <ion-select-option value="3">A veces</ion-select-option>
+        <ion-select-option value="4">Casi siempre</ion-select-option>
+        <ion-select-option value="5">Siempre</ion-select-option>
       </ion-select>
     </ion-item>   
     <p>2) Cuando duermo 6-8 horas diarias, me siento descansado.</p>
     <ion-item>      
       <ion-select [(ngModel)]="caa.answer2" (change)="capturar()" required="true" placeholder="seleccione">
-          <ion-select-option >Seleccione</ion-select-option>
-          <ion-select-option *ngFor="let dato of datos">  
-              {{dato}}
-            </ion-select-option>
+        <ion-select-option value="1">Nunca </ion-select-option>
+        <ion-select-option value="2">Casi nunca</ion-select-option>
+        <ion-select-option value="3">A veces</ion-select-option>
+        <ion-select-option value="4">Casi siempre</ion-select-option>
+        <ion-select-option value="5">Siempre</ion-select-option>
       </ion-select>
     </ion-item>
     <p>3) Siento que mi estado de ánimo me permite cuidarme.</p>
     <ion-item>      
       <ion-select [(ngModel)]="caa.answer3" (change)="capturar()" required="true" placeholder="seleccione">
-          <ion-select-option *ngFor="let dato of datos">  
-              {{dato}}
-            </ion-select-option>
+        <ion-select-option value="1">Nunca </ion-select-option>
+        <ion-select-option value="2">Casi nunca</ion-select-option>
+        <ion-select-option value="3">A veces</ion-select-option>
+        <ion-select-option value="4">Casi siempre</ion-select-option>
+        <ion-select-option value="5">Siempre</ion-select-option>
       </ion-select>
     </ion-item>   
     <p>4) Considero importante realizar ejercicio.</p>
     <ion-item>      
       <ion-select [(ngModel)]="caa.answer4" (change)="capturar()" required="true" placeholder="seleccione">
-          <ion-select-option *ngFor="let dato of datos">  
-              {{dato}}
-            </ion-select-option>
+        <ion-select-option value="1">Nunca </ion-select-option>
+        <ion-select-option value="2">Casi nunca</ion-select-option>
+        <ion-select-option value="3">A veces</ion-select-option>
+        <ion-select-option value="4">Casi siempre</ion-select-option>
+        <ion-select-option value="5">Siempre</ion-select-option>
       </ion-select>
     </ion-item>     
     <p>5) Busco información y orientación sobre el manejo de mi enfermedad.</p>
     <ion-item>      
       <ion-select [(ngModel)]="caa.answer5" (change)="capturar()" required="true" placeholder="seleccione">
-          <ion-select-option *ngFor="let dato of datos">  
-              {{dato}}
-            </ion-select-option>
+        <ion-select-option value="1">Nunca </ion-select-option>
+        <ion-select-option value="2">Casi nunca</ion-select-option>
+        <ion-select-option value="3">A veces</ion-select-option>
+        <ion-select-option value="4">Casi siempre</ion-select-option>
+        <ion-select-option value="5">Siempre</ion-select-option>
       </ion-select>
     </ion-item>   
     <p>6) Considero que conozco cómo actúan y las reacciones desfavorables de los medicamentos que
@@ -70,9 +75,11 @@
         controlar la presión arterial.</p>
         <ion-item>      
             <ion-select [(ngModel)]="caa.answer6" (change)="capturar()" required="true" placeholder="seleccione">
-                <ion-select-option *ngFor="let dato of datos">  
-                    {{dato}}
-                  </ion-select-option>
+              <ion-select-option value="1">Nunca </ion-select-option>
+              <ion-select-option value="2">Casi nunca</ion-select-option>
+              <ion-select-option value="3">A veces</ion-select-option>
+              <ion-select-option value="4">Casi siempre</ion-select-option>
+              <ion-select-option value="5">Siempre</ion-select-option>
             </ion-select>
           </ion-item>
   
@@ -81,9 +88,11 @@
         necesaria sobre la correcta administración.</p>
         <ion-item>      
             <ion-select [(ngModel)]="caa.answer7" (change)="capturar()" required="true" placeholder="seleccione">
-                <ion-select-option *ngFor="let dato of datos">  
-                    {{dato}}
-                  </ion-select-option>
+              <ion-select-option value="1">Nunca </ion-select-option>
+              <ion-select-option value="2">Casi nunca</ion-select-option>
+              <ion-select-option value="3">A veces</ion-select-option>
+              <ion-select-option value="4">Casi siempre</ion-select-option>
+              <ion-select-option value="5">Siempre</ion-select-option>
             </ion-select>
           </ion-item>
   
@@ -92,44 +101,54 @@
         alimentos son dos cucharaditas.</p>
         <ion-item>      
             <ion-select [(ngModel)]="caa.answer8" (change)="capturar()" required="true" placeholder="seleccione">
-                <ion-select-option *ngFor="let dato of datos">  
-                    {{dato}}
-                  </ion-select-option>
+              <ion-select-option value="1">Nunca </ion-select-option>
+              <ion-select-option value="2">Casi nunca</ion-select-option>
+              <ion-select-option value="3">A veces</ion-select-option>
+              <ion-select-option value="4">Casi siempre</ion-select-option>
+              <ion-select-option value="5">Siempre</ion-select-option>
             </ion-select>
           </ion-item>
   
       <p>9) Reemplazo mi tratamiento por terapias alternativas.</p>
       <ion-item>      
           <ion-select [(ngModel)]="caa.answer9" (change)="capturar()" required="true" placeholder="seleccione">
-              <ion-select-option *ngFor="let dato of datos">  
-                  {{dato}}
-                </ion-select-option>
+            <ion-select-option value="1">Nunca </ion-select-option>
+            <ion-select-option value="2">Casi nunca</ion-select-option>
+            <ion-select-option value="3">A veces</ion-select-option>
+            <ion-select-option value="4">Casi siempre</ion-select-option>
+            <ion-select-option value="5">Siempre</ion-select-option>
           </ion-select>
         </ion-item>
   
       <p>10) Considero que el profesional de enfermería me escucha y aclara mis inquietudes.</p>
       <ion-item>      
           <ion-select [(ngModel)]="caa.answer10" (change)="capturar()" required="true" placeholder="seleccione">
-              <ion-select-option *ngFor="let dato of datos">  
-                  {{dato}}
-                </ion-select-option>
+            <ion-select-option value="1">Nunca </ion-select-option>
+            <ion-select-option value="2">Casi nunca</ion-select-option>
+            <ion-select-option value="3">A veces</ion-select-option>
+            <ion-select-option value="4">Casi siempre</ion-select-option>
+            <ion-select-option value="5">Siempre</ion-select-option>
           </ion-select>
         </ion-item>
   
       <p>11) Conozco las complicaciones derivadas de la enfermedad.</p>
       <ion-item>      
           <ion-select [(ngModel)]="caa.answer11" (change)="capturar()" required="true" placeholder="seleccione">
-              <ion-select-option *ngFor="let dato of datos">  
-                  {{dato}}
-                </ion-select-option>
+            <ion-select-option value="1">Nunca </ion-select-option>
+            <ion-select-option value="2">Casi nunca</ion-select-option>
+            <ion-select-option value="3">A veces</ion-select-option>
+            <ion-select-option value="4">Casi siempre</ion-select-option>
+            <ion-select-option value="5">Siempre</ion-select-option>
           </ion-select>
         </ion-item>
       <p>12) Camino diariamente, como mínimo, 30 minutos.</p>
       <ion-item>      
           <ion-select [(ngModel)]="caa.answer12" (change)="capturar()" required="true" placeholder="seleccione">
-              <ion-select-option *ngFor="let dato of datos">  
-                  {{dato}}
-                </ion-select-option>
+            <ion-select-option value="1">Nunca </ion-select-option>
+            <ion-select-option value="2">Casi nunca</ion-select-option>
+            <ion-select-option value="3">A veces</ion-select-option>
+            <ion-select-option value="4">Casi siempre</ion-select-option>
+            <ion-select-option value="5">Siempre</ion-select-option>
           </ion-select>
         </ion-item>
   
@@ -137,18 +156,22 @@
          la enfermedad.</p>
       <ion-item>      
           <ion-select [(ngModel)]="caa.answer13" (change)="capturar()" required="true" placeholder="seleccione">
-              <ion-select-option *ngFor="let dato of datos">  
-                  {{dato}}
-                </ion-select-option>
+            <ion-select-option value="1">Nunca </ion-select-option>
+            <ion-select-option value="2">Casi nunca</ion-select-option>
+            <ion-select-option value="3">A veces</ion-select-option>
+            <ion-select-option value="4">Casi siempre</ion-select-option>
+            <ion-select-option value="5">Siempre</ion-select-option>
           </ion-select>
         </ion-item>
   
       <p>14) Realizo cambios en mi dieta para mantener un peso adecuado.</p>
       <ion-item>      
           <ion-select [(ngModel)]="caa.answer14" (change)="capturar()" required="true" placeholder="seleccione">
-              <ion-select-option *ngFor="let dato of datos">  
-                  {{dato}}
-                </ion-select-option>
+            <ion-select-option value="1">Nunca </ion-select-option>
+            <ion-select-option value="2">Casi nunca</ion-select-option>
+            <ion-select-option value="3">A veces</ion-select-option>
+            <ion-select-option value="4">Casi siempre</ion-select-option>
+            <ion-select-option value="5">Siempre</ion-select-option>
           </ion-select>
         </ion-item>
   
@@ -156,18 +179,22 @@
         garantizar mi bienestar y el de mi familia.</p>
         <ion-item>      
             <ion-select [(ngModel)]="caa.answer15" (change)="capturar()" required="true" placeholder="seleccione">
-                <ion-select-option *ngFor="let dato of datos">  
-                    {{dato}}
-                  </ion-select-option>
+              <ion-select-option value="1">Nunca </ion-select-option>
+              <ion-select-option value="2">Casi nunca</ion-select-option>
+              <ion-select-option value="3">A veces</ion-select-option>
+              <ion-select-option value="4">Casi siempre</ion-select-option>
+              <ion-select-option value="5">Siempre</ion-select-option>
             </ion-select>
           </ion-item>
   
       <p>16) Consumo en mi dieta comidas ricas en verduras, frutas, fibra y baja en grasas.</p>
       <ion-item>      
           <ion-select [(ngModel)]="caa.answer16" (change)="capturar()" placeholder="seleccione" required="true"> 
-              <ion-select-option *ngFor="let dato of datos">  
-                  {{dato}}
-                </ion-select-option>
+            <ion-select-option value="1">Nunca </ion-select-option>
+            <ion-select-option value="2">Casi nunca</ion-select-option>
+            <ion-select-option value="3">A veces</ion-select-option>
+            <ion-select-option value="4">Casi siempre</ion-select-option>
+            <ion-select-option value="5">Siempre</ion-select-option>
           </ion-select>
         </ion-item>
   
@@ -175,9 +202,11 @@
          de mi vida sexual.</p>
       <ion-item>      
           <ion-select [(ngModel)]="caa.answer17" (change)="capturar()" required="true" placeholder="seleccione">
-              <ion-select-option *ngFor="let dato of datos">  
-                  {{dato}}
-                </ion-select-option>
+            <ion-select-option value="1">Nunca </ion-select-option>
+            <ion-select-option value="2">Casi nunca</ion-select-option>
+            <ion-select-option value="3">A veces</ion-select-option>
+            <ion-select-option value="4">Casi siempre</ion-select-option>
+            <ion-select-option value="5">Siempre</ion-select-option>          
           </ion-select>
         </ion-item>
 

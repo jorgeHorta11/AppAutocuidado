@@ -68,6 +68,16 @@ const routes: Routes = [
           }
         ]
       },
+      {
+        path: 'alarma',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../alarma/alarma.module').then(m => m.AlarmaPageModule)
+          }
+        ]
+      },
       
       {
         path: '',
