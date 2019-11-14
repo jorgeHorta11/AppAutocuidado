@@ -1,5 +1,5 @@
-export class Question{
-    question: string
-    optionYesNo: string
-    howLongOption: string
+export class Question {
+    question: string;
+    optionYesNo: string;
+    howLongOption: string;
 }

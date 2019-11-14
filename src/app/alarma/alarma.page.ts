@@ -17,7 +17,7 @@ export class AlarmaPage {
   alarma: Alarma = new Alarma();
   //howLongOption: HowLongOption = new HowLongOption();
 
-  defaultSelectedRadio = "0";
+  defaultSelectedRadio = '0';
   //Get value on ionChange on IonRadioGroup
   selectedRadioGroup: any;
   //Get value on ionSelect on IonRadio item
@@ -31,7 +31,10 @@ export class AlarmaPage {
   validar7: string;
   validar8: string;
   validar9: string;
-  constructor(private alarmaService : AlarmaService){}
+  constructor(private alarmaService: AlarmaService) {
+
+  }
+
   radio_list = [
     {
       id: '1',
@@ -56,80 +59,81 @@ export class AlarmaPage {
   }
   // TODO: Valida cada opción elegida y muestra o esconde el contenido de la segunda pregunta. 
   radioSelect1(event) {
-    console.log("1 Respuesta: ", event.detail.value);
+    console.log('1 Respuesta: ', event.detail.value);
     this.selectedRadioItem = event.detail;
     this.validar1 = event.detail.value;
-    if (this.validar1 == "0") {
+    if (this.validar1 == '0') {
       document.getElementById('ocultar1').style.display = 'none';
     } else {
       document.getElementById('ocultar1').style.display = 'block';
     }
   }
   radioSelect2(event) {
-    console.log("2 Respuesta: ", event.detail.value);
+    console.log('2 Respuesta: ', event.detail.value);
     this.selectedRadioItem = event.detail;
     this.validar2 = event.detail.value;
-    if (this.validar2 == "0") {
+    // tslint:disable-next-line: triple-equals
+    if (this.validar2 == '0') {
       document.getElementById('ocultar2').style.display = 'none';
     } else {
       document.getElementById('ocultar2').style.display = 'block';
     }
   }
   radioSelect3(event) {
-    console.log("3 Respuesta: ", event.detail.value);
+    console.log('3 Respuesta: ', event.detail.value);
     this.selectedRadioItem = event.detail;
     this.validar3 = event.detail.value;
-    if (this.validar3 == "0") {
+    if (this.validar3 == '0') {
       document.getElementById('ocultar3').style.display = 'none';
     } else {
       document.getElementById('ocultar3').style.display = 'block';
     }
   }
   radioSelect4(event) {
-    console.log("4 Respuesta: ", event.detail.value);
+    console.log('4 Respuesta: ', event.detail.value);
     this.selectedRadioItem = event.detail;
     this.validar4 = event.detail.value;
-    if (this.validar4 == "0") {
+    if (this.validar4 == '0') {
       document.getElementById('ocultar4').style.display = 'none';
     } else {
       document.getElementById('ocultar4').style.display = 'block';
     }
   }
   radioSelect5(event) {
-    console.log("5 Respuesta: ", event.detail.value);
+    console.log('5 Respuesta: ', event.detail.value);
     this.selectedRadioItem = event.detail;
     this.validar5 = event.detail.value;
   }
   radioSelect6(event) {
-    console.log("6 Respuesta: ", event.detail.value);
+    console.log('6 Respuesta: ', event.detail.value);
     this.selectedRadioItem = event.detail;
     this.validar6 = event.detail.value;
   }
   radioSelect7(event) {
-    console.log("7 Respuesta: ", event.detail.value);
+    console.log('7 Respuesta: ', event.detail.value);
     this.selectedRadioItem = event.detail;
     this.validar7 = event.detail.value;
-    if (this.validar7 == "0") {
+    if (this.validar7 == '0') {
       document.getElementById('ocultar5').style.display = 'none';
     } else {
       document.getElementById('ocultar5').style.display = 'block';
     }
   }
   radioSelect8(event) {
-    console.log("8 Respuesta: ", event.detail.value);
+    console.log('8 Respuesta: ', event.detail.value);
     this.selectedRadioItem = event.detail;
     this.validar8 = event.detail.value;
-    if (this.validar8 == "0") {
+    if (this.validar8 == '0') {
       document.getElementById('ocultar6').style.display = 'none';
     } else {
       document.getElementById('ocultar6').style.display = 'block';
     }
   }
   radioSelect9(event) {
-    console.log("9 Respuesta: ", event.detail.value);
+    console.log('9 Respuesta: ', event.detail.value);
     this.selectedRadioItem = event.detail;
     this.validar9 = event.detail.value;
-    if (this.validar9 == "0") {
+    if (this.validar9 == '0') {
       document.getElementById('ocultar7').style.display = 'none';
     } else {
       document.getElementById('ocultar7').style.display = 'block';
@@ -138,70 +142,63 @@ export class AlarmaPage {
 
 
   createAlarma() {
-    let id = localStorage.getItem("id");
+    let id = localStorage.getItem('id');
     let idNumber = parseInt(id);
-    console.log("Este es el id", id);
+    console.log('Este es el id', id);
 
-
-
-    const alarma = {
+    this.alarma = {
       documentNumber: idNumber,
       preguntaList: [
         {
-          question: "1",
+          question: '1',
           optionYesNo: this.validar1,
-          howLongOption: "Menos de 1 hora"
+          howLongOption: 'Menos de 1 hora'
         },
         {
-          question: "2",
+          question: '2',
           optionYesNo: this.validar2,
-          howLongOption: "No sé"
+          howLongOption: 'No sé'
         },
         {
-          question: "3",
+          question: '3',
           optionYesNo: this.validar3,
-          howLongOption: "Menos de 3 horas"
+          howLongOption: 'Menos de 3 horas'
         },
         {
-          question: "4",
+          question: '4',
           optionYesNo: this.validar4,
-          howLongOption: "Días"
+          howLongOption: 'Días'
         },
         {
-          question: "5",
+          question: '5',
           optionYesNo: this.validar5,
-          howLongOption: "N/A"
+          howLongOption: 'N/A'
         },
         {
-          question: "6",
+          question: '6',
           optionYesNo: this.validar6,
-          howLongOption: "N/A"
+          howLongOption: 'N/A'
         },
         {
-          question: "7",
+          question: '7',
           optionYesNo: this.validar7,
-          howLongOption: "N/A"
+          howLongOption: 'N/A'
         },
         {
-          question: "8",
+          question: '8',
           optionYesNo: this.validar8,
-          howLongOption: "N/A"
+          howLongOption: 'N/A'
         },
         {
-          question: "9",
+          question: '9',
           optionYesNo: this.validar9,
-          howLongOption: "Días"
+          howLongOption: 'Días'
         },
       ]
-    }
-    console.log(alarma);
+    };
 
-    this.alarmaService.createAlarma(this.alarma)
-      .subscribe((newCAA) => {
-      console.log(newCAA);
-    });
-    
+    console.log(this.alarma.preguntaList);
 
+    this.alarmaService.createAlarma(this.alarma).subscribe((newAlarma) => {console.log(newAlarma);});
   }
-
 }
